@@ -1,0 +1,30 @@
+[submodule "ctrlp.vim"]
+	path = ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim
+[submodule "elm-vim"]
+	path = elm-vim
+	url = https://github.com/ElmCast/elm-vim
+[submodule "purescript-vim"]
+	path = purescript-vim
+	url = https://github.com/purescript-contrib/purescript-vim
+[submodule "syntastic"]
+	path = syntastic
+	url = https://github.com/vim-syntastic/syntastic
+[submodule "vim-airline"]
+	path = vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "vim-fugitive"]
+	path = vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "vim-gradle"]
+	path = vim-gradle
+	url = https://github.com/tfnico/vim-gradle
+[submodule "vim-hindent"]
+	path = vim-hindent
+	url = https://github.com/alx741/vim-hindent
+[submodule "vim-io"]
+	path = vim-io
+	url = https://github.com/andreimaxim/vim-io
+[submodule "vim-swift"]
+	path = vim-swift
+	url = https://github.com/toyamarinyon/vim-swift
