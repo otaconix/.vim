@@ -4,8 +4,6 @@ filetype on
 filetype indent on
 filetype plugin on
 
-colo evening
-
 set clipboard=unnamed
 set completeopt-=preview
 set encoding=utf-8
@@ -27,6 +25,8 @@ let g:xml_syntax_folding=1
 
 execute pathogen#infect()
 
+colo onedark
+
 autocmd BufNewFile,BufRead *.adoc,*.asciidoc setf asciidoc
 autocmd BufNewFile,BufRead *.gradle setf groovy
 autocmd FileType haskell setlocal et sw=2 ts=2 autoindent
@@ -35,16 +35,16 @@ autocmd FileType xml setlocal foldmethod=syntax
 nmap <C-B> :CtrlPBuffer<CR>
 
 if has("mac")
-	if has("gui_macvim")
-		set macligatures
-	endif
-	set guifont=Fira\ Code:h14
+    if has("gui_macvim")
+        set macligatures
+    endif
+    set guifont=Fira\ Code:h14
 elseif has("unix")
     colo koehler
     set background=dark
 elseif has("win32")
-	set guifont=Fira_Mono_Medium:h12
-	set guioptions=rL
+    set guifont=Fira_Mono_Medium:h12
+    set guioptions=rL
 
-	set directory=~/vimswap/
+    set directory=~/vimswap/
 endif

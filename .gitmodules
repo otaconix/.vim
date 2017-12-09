@@ -55,3 +55,6 @@
 [submodule "bundle/iptables"]
 	path = bundle/iptables
 	url = https://github.com/vim-scripts/iptables
+[submodule "bundle/onedark"]
+	path = bundle/onedark
+	url = https://github.com/joshdick/onedark.vim
