@@ -52,3 +52,6 @@
 [submodule "bundle/nginx.vim"]
 	path = bundle/nginx.vim
 	url = https://github.com/chr4/nginx.vim
+[submodule "bundle/iptables"]
+	path = bundle/iptables
+	url = https://github.com/vim-scripts/iptables
