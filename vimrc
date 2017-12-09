@@ -14,6 +14,7 @@ set fileencoding=utf-8
 set hidden
 set incsearch
 set laststatus=2
+set mouse=a
 set nocompatible
 set ruler
 set shiftwidth=4
@@ -38,6 +39,9 @@ if has("mac")
 		set macligatures
 	endif
 	set guifont=Fira\ Code:h14
+elseif has("unix")
+    colo koehler
+    set background=dark
 elseif has("win32")
 	set guifont=Fira_Mono_Medium:h12
 	set guioptions=rL
