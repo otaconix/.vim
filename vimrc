@@ -20,9 +20,10 @@ set shiftwidth=4
 set tabstop=4
 set viminfo=
 
+let g:ctrlp_by_filename = 1
 let g:ctrlp_user_command = ['.git', 'cd %s & git ls-files -co --exclude-standard']
 let g:elm_format_autosave = 1
-let g:xml_syntax_folding=1
+let g:xml_syntax_folding = 1
 
 execute pathogen#infect()
 
