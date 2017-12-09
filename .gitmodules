@@ -28,3 +28,27 @@
 [submodule "vim-swift"]
 	path = bundle/vim-swift
 	url = https://github.com/toyamarinyon/vim-swift
+[submodule "bundle/javap.vim"]
+	path = bundle/javap.vim
+	url = https://github.com/yuratomo/javap.vim.git
+[submodule "bundle/kotlin-vim"]
+	path = bundle/kotlin-vim
+	url = https://github.com/udalov/kotlin-vim
+[submodule "bundle/tabular"]
+	path = bundle/tabular
+	url = https://github.com/godlygeek/tabular.git
+[submodule "bundle/vim-ansible-yaml"]
+	path = bundle/vim-ansible-yaml
+	url = https://github.com/chase/vim-ansible-yaml.git
+[submodule "bundle/vim-protobuf"]
+	path = bundle/vim-protobuf
+	url = https://github.com/uarun/vim-protobuf
+[submodule "bundle/vim-puppet"]
+	path = bundle/vim-puppet
+	url = https://github.com/rodjek/vim-puppet.git
+[submodule "bundle/vim-scala"]
+	path = bundle/vim-scala
+	url = https://github.com/derekwyatt/vim-scala.git
+[submodule "bundle/nginx.vim"]
+	path = bundle/nginx.vim
+	url = https://github.com/chr4/nginx.vim
