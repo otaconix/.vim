@@ -4,6 +4,7 @@ filetype on
 filetype indent on
 filetype plugin on
 
+set background=dark
 set clipboard=unnamed
 set completeopt-=preview
 set encoding=utf-8
@@ -40,8 +41,7 @@ if has("mac")
     endif
     set guifont=Fira\ Code:h14
 elseif has("unix")
-    colo koehler
-    set background=dark
+    " Nothing here for now
 elseif has("win32")
     set guifont=Fira_Mono_Medium:h12
     set guioptions=rL
