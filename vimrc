@@ -39,8 +39,8 @@ nmap <C-B> :CtrlPBuffer<CR>
 if has("mac")
     if has("gui_macvim")
         set macligatures
+        set guifont=Fira\ Code:h14
     endif
-    set guifont=Fira\ Code:h14
 elseif has("unix")
     " Nothing here for now
 elseif has("win32")
