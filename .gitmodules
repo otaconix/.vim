@@ -58,3 +58,6 @@
 [submodule "bundle/vim-swift"]
 	path = bundle/vim-swift
 	url = https://github.com/toyamarinyon/vim-swift
+[submodule "bundle/vimpager"]
+	path = bundle/vimpager
+	url = https://github.com/rkitover/vimpager
