@@ -10,6 +10,7 @@ filetype plugin on
 set background=dark
 set clipboard=unnamed
 set completeopt-=preview
+let &directory=fnamemodify($MYVIMRC, ":p:h") . "/swap//"
 set encoding=utf-8
 set expandtab
 set fileencoding=utf-8
@@ -23,6 +24,7 @@ set shiftwidth=4
 set tabstop=4
 set viminfo=
 
+let g:ale_yaml_yamllint_options = '-d "{extends: default, rules: {colons: {max-spaces-after: -1}}}"'
 let g:ctrlp_by_filename = 1
 let g:ctrlp_user_command = ['.git', 'cd %s & git ls-files -co --exclude-standard']
 let g:xml_syntax_folding = 1
@@ -48,6 +50,4 @@ elseif has("unix")
 elseif has("win32")
     set guifont=Fira_Mono_Medium:h12
     set guioptions=rL
-
-    set directory=~/vimswap/
 endif
