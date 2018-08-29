@@ -61,3 +61,6 @@
 [submodule "bundle/vim-swift"]
 	path = bundle/vim-swift
 	url = https://github.com/toyamarinyon/vim-swift
+[submodule "bundle\\plantuml-syntax"]
+	path = bundle\\plantuml-syntax
+	url = https://github.com/aklt/plantuml-syntax
