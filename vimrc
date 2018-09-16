@@ -23,6 +23,7 @@ set ruler
 set shiftwidth=4
 set tabstop=4
 set viminfo=
+set modelines=100
 
 let g:ale_yaml_yamllint_options = '-d "{extends: default, rules: {colons: {max-spaces-after: -1}}}"'
 let g:ctrlp_by_filename = 1
