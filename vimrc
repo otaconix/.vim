@@ -27,6 +27,11 @@ set viminfo=
 let g:ale_yaml_yamllint_options = '-d "{extends: default, rules: {colons: {max-spaces-after: -1}}}"'
 let g:ctrlp_by_filename = 1
 let g:ctrlp_user_command = ['.git', 'cd %s & git ls-files -co --exclude-standard']
+if !has('python') && !has('python3')
+    echo 'In order to use pymatcher plugin, you need +python compiled vim'
+else
+    let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+endif
 let g:xml_syntax_folding = 1
 
 execute pathogen#infect()
@@ -48,6 +53,6 @@ if has("mac")
 elseif has("unix")
     " Nothing here for now
 elseif has("win32")
-    set guifont=Fira_Code_Medium:h12,Fira_Mono_Medium:h12
+    set guifont=Fira_Mono_Medium:h12
     set guioptions=rL
 endif
