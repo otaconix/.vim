@@ -67,3 +67,6 @@
 [submodule "bundle/vim-swift"]
 	path = bundle/vim-swift
 	url = https://github.com/toyamarinyon/vim-swift
+[submodule "bundle/neoformat"]
+	path = bundle/neoformat
+	url = https://github.com/sbdchd/neoformat
