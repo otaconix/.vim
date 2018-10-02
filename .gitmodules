@@ -1,72 +1,72 @@
 [submodule "bundle/ale"]
-	path = bundle/ale
+	path = pack/bundle/start/ale
 	url = https://github.com/w0rp/ale
 [submodule "bundle/ctrlp.vim"]
-	path = bundle/ctrlp.vim
+	path = pack/bundle/start/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim
 [submodule "bundle/ctrlp-py-matcher"]
-	path = bundle/ctrlp-py-matcher
+	path = pack/bundle/start/ctrlp-py-matcher
 	url = https://github.com/FelikZ/ctrlp-py-matcher
 [submodule "bundle/elm-vim"]
-	path = bundle/elm-vim
+	path = pack/bundle/start/elm-vim
 	url = https://github.com/ElmCast/elm-vim
 [submodule "bundle/iptables"]
-	path = bundle/iptables
+	path = pack/bundle/start/iptables
 	url = https://github.com/vim-scripts/iptables
 [submodule "bundle/javap.vim"]
-	path = bundle/javap.vim
+	path = pack/bundle/start/javap.vim
 	url = https://github.com/yuratomo/javap.vim.git
 [submodule "bundle/kotlin-vim"]
-	path = bundle/kotlin-vim
+	path = pack/bundle/start/kotlin-vim
 	url = https://github.com/udalov/kotlin-vim
 [submodule "bundle/nginx.vim"]
-	path = bundle/nginx.vim
+	path = pack/bundle/start/nginx.vim
 	url = https://github.com/chr4/nginx.vim
 [submodule "bundle/onedark"]
-	path = bundle/onedark
+	path = pack/bundle/start/onedark
 	url = https://github.com/joshdick/onedark.vim
 [submodule "bundle/plantuml-syntax"]
-	path = bundle/plantuml-syntax
+	path = pack/bundle/start/plantuml-syntax
 	url = https://github.com/aklt/plantuml-syntax
 [submodule "bundle/purescript-vim"]
-	path = bundle/purescript-vim
+	path = pack/bundle/start/purescript-vim
 	url = https://github.com/purescript-contrib/purescript-vim
 [submodule "bundle/tabular"]
-	path = bundle/tabular
+	path = pack/bundle/start/tabular
 	url = https://github.com/godlygeek/tabular.git
 [submodule "bundle/vim-airline"]
-	path = bundle/vim-airline
+	path = pack/bundle/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline
 [submodule "bundle/vim-ansible-yaml"]
-	path = bundle/vim-ansible-yaml
+	path = pack/bundle/start/vim-ansible-yaml
 	url = https://github.com/chase/vim-ansible-yaml.git
 [submodule "bundle/vim-fugitive"]
-	path = bundle/vim-fugitive
+	path = pack/bundle/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
 [submodule "bundle/vim-gradle"]
-	path = bundle/vim-gradle
+	path = pack/bundle/start/vim-gradle
 	url = https://github.com/tfnico/vim-gradle
 [submodule "bundle/vim-hindent"]
 	path = bundle/vim-hindent
 	url = https://github.com/alx741/vim-hindent
 [submodule "bundle/vim-io"]
-	path = bundle/vim-io
+	path = pack/bundle/start/vim-io
 	url = https://github.com/andreimaxim/vim-io
 [submodule "bundle/vim-protobuf"]
-	path = bundle/vim-protobuf
+	path = pack/bundle/start/vim-protobuf
 	url = https://github.com/uarun/vim-protobuf
 [submodule "bundle/vim-puppet"]
-	path = bundle/vim-puppet
+	path = pack/bundle/start/vim-puppet
 	url = https://github.com/rodjek/vim-puppet.git
 [submodule "bundle/vim-ps1"]
-	path = bundle/vim-ps1
+	path = pack/bundle/start/vim-ps1
 	url = https://github.com/PProvost/vim-ps1
 [submodule "bundle/vim-scala"]
-	path = bundle/vim-scala
+	path = pack/bundle/start/vim-scala
 	url = https://github.com/derekwyatt/vim-scala.git
 [submodule "bundle/vim-swift"]
-	path = bundle/vim-swift
+	path = pack/bundle/start/vim-swift
 	url = https://github.com/toyamarinyon/vim-swift
 [submodule "bundle/neoformat"]
-	path = bundle/neoformat
+	path = pack/bundle/start/neoformat
 	url = https://github.com/sbdchd/neoformat

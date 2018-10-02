@@ -35,7 +35,7 @@ else
 endif
 let g:xml_syntax_folding = 1
 
-execute pathogen#infect()
+packloadall
 
 colo onedark
 
