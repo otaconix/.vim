@@ -1,6 +1,8 @@
 unlet! skip_defaults_vim
 source $VIMRUNTIME/defaults.vim
-source ~/.localvimrc
+if filereadable("~/.localvimrc")
+    source ~/.localvimrc
+endif
 
 syntax on
 
