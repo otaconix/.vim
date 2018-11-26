@@ -43,6 +43,7 @@ colo onedark
 autocmd BufNewFile,BufRead *.adoc,*.asciidoc setf asciidoc
 autocmd BufNewFile,BufRead *.gradle setf groovy
 autocmd FileType haskell setlocal expandtab shiftwidth=2 tabstop=2 autoindent | let b:neoformat_enabled_haskell=['brittany']
+autocmd FileType netrw setlocal bufhidden=wipe
 autocmd FileType xml setlocal foldmethod=syntax
 
 augroup fmt
