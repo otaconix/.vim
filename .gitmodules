@@ -49,9 +49,6 @@
 [submodule "bundle/vim-hindent"]
 	path = bundle/vim-hindent
 	url = https://github.com/alx741/vim-hindent
-[submodule "bundle/vim-io"]
-	path = pack/bundle/start/vim-io
-	url = https://github.com/andreimaxim/vim-io
 [submodule "bundle/vim-protobuf"]
 	path = pack/bundle/start/vim-protobuf
 	url = https://github.com/uarun/vim-protobuf
