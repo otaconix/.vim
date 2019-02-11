@@ -42,6 +42,8 @@ packloadall
 
 colo onedark
 
+vnoremap * y/<C-R>"<CR>
+
 autocmd BufNewFile,BufRead *.adoc,*.asciidoc setf asciidoc
 autocmd BufNewFile,BufRead *.gradle setf groovy
 autocmd FileType haskell setlocal expandtab shiftwidth=2 tabstop=2 autoindent | let b:neoformat_enabled_haskell=['brittany']
