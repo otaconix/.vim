@@ -18,6 +18,7 @@ set encoding=utf-8
 set expandtab
 set fileencoding=utf-8
 set hidden
+set hlsearch
 set incsearch
 set laststatus=2
 set modelines=100
@@ -49,6 +50,8 @@ autocmd BufNewFile,BufRead *.gradle setf groovy
 autocmd FileType haskell setlocal expandtab shiftwidth=2 tabstop=2 autoindent | let b:neoformat_enabled_haskell=['brittany']
 autocmd FileType netrw setlocal bufhidden=wipe
 autocmd FileType xml setlocal foldmethod=syntax
+
+command Wb w | bd
 
 augroup fmt
     au!
