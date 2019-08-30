@@ -11,7 +11,7 @@ filetype indent on
 filetype plugin on
 
 set background=dark
-set clipboard=unnamed
+set clipboard=unnamedplus
 set completeopt-=preview
 let &directory=fnamemodify($MYVIMRC, ":p:h") . "/swap//"
 set encoding=utf-8
@@ -44,6 +44,8 @@ packloadall
 colo onedark
 
 vnoremap * y/<C-R>"<CR>
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
 
 autocmd BufNewFile,BufRead *.adoc,*.asciidoc setf asciidoc
 autocmd BufNewFile,BufRead *.gradle setf groovy
