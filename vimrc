@@ -10,18 +10,18 @@ filetype on
 filetype indent on
 filetype plugin on
 
-set background=dark
-set clipboard=unnamedplus
+set background=dark                                      " Use dark background
+set clipboard=unnamedplus                                " Use 'unnamedplus' background
 set completeopt-=preview
-let &directory=fnamemodify($MYVIMRC, ":p:h") . "/swap//"
+let &directory=fnamemodify($MYVIMRC, ":p:h") . "/swap//" " Put swap files in the same directory vimrc is in
 set encoding=utf-8
-set expandtab
+set expandtab                                            " Use spaces instead of tabs
 set fileencoding=utf-8
-set hidden
-set hlsearch
-set incsearch
+set hidden                                               " Allow hidden buffers
+set hlsearch                                             " Highlight search results
+set incsearch                                            " Highlight incremental search results (highlight as you type)
 set laststatus=2
-set modelines=100
+set modelines=100                                        " Search for modelines within the first 100 lines
 set mouse=a
 set nocompatible
 set ruler
@@ -73,4 +73,14 @@ elseif has("unix")
 elseif has("win32")
     set guifont=Fira_Mono_Medium:h12
     set guioptions=
+endif
+
+" Work around issue with background when using Kitty terminal
+if &term == "xterm-kitty"
+    let &t_ut=''
+endif
+
+" Use GUI colors on the terminal
+if has('termguicolors')
+    set termguicolors
 endif
