@@ -68,7 +68,7 @@ if has("mac")
         set guifont=Fira\ Code:h14
     endif
 elseif has("unix")
-    set guifont=Fira\ Code\ weight=453\ 12
+    set guifont=Cascadia\ Code\ 12
     set guioptions=
 elseif has("win32")
     set guifont=Fira_Mono_Medium:h12
