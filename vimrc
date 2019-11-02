@@ -16,7 +16,9 @@ set completeopt-=preview
 let &directory=fnamemodify($MYVIMRC, ":p:h") . "/swap//" " Put swap files in the same directory vimrc is in
 set encoding=utf-8
 set expandtab                                            " Use spaces instead of tabs
-set fileencoding=utf-8
+if &modifiable
+    set fileencoding=utf-8
+endif
 set hidden                                               " Allow hidden buffers
 set hlsearch                                             " Highlight search results
 set incsearch                                            " Highlight incremental search results (highlight as you type)
