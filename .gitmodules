@@ -1,7 +1,3 @@
-[submodule "bundle/ale"]
-	path = pack/bundle/start/ale
-	url = https://github.com/w0rp/ale
-	ignore = dirty
 [submodule "bundle/ctrlp.vim"]
 	path = pack/bundle/start/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim
@@ -106,3 +102,7 @@
 	path = pack/bundle/start/vim-fish
 	url = https://github.com/dag/vim-fish
 	ignore = dirty
+[submodule "pack/bundle/start/LanguageClient-neovim"]
+	path = pack/bundle/start/LanguageClient-neovim
+	url = https://github.com/autozimu/LanguageClient-neovim
+	branch = next

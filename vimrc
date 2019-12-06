@@ -12,7 +12,7 @@ filetype plugin on
 
 set background=dark                                      " Use dark background
 set clipboard=unnamedplus                                " Use 'unnamedplus' background
-set completeopt-=preview
+set completeopt+=noselect
 let &directory=fnamemodify($MYVIMRC, ":p:h") . "/swap//" " Put swap files in the same directory vimrc is in
 set encoding=utf-8
 set expandtab                                            " Use spaces instead of tabs
@@ -86,3 +86,23 @@ endif
 if has('termguicolors')
     set termguicolors
 endif
+
+let s:LanguageClient_serverCommands = {
+            \ 'bash': ['bash-language-server', 'start'],
+            \ 'dockerfile': ['docker-langserver', '--stdio'],
+            \ 'javascript': ['javascript-typescript-langserver'],
+            \ 'python': ['pyls'],
+            \ 'rust': ['rustup', 'run', 'stable', 'rls'],
+            \ }
+
+let g:LanguageClient_serverCommands = {}
+
+for languageServer in keys(s:LanguageClient_serverCommands)
+    let binary = s:LanguageClient_serverCommands[languageServer][0]
+
+    if executable(binary)
+        let g:LanguageClient_serverCommands[languageServer] = s:LanguageClient_serverCommands[languageServer]
+    endif
+endfor
+
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
