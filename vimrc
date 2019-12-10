@@ -11,7 +11,7 @@ filetype indent on
 filetype plugin on
 
 set background=dark                                      " Use dark background
-set clipboard=unnamedplus                                " Use 'unnamedplus' background
+set clipboard=unnamedplus                                " Use 'unnamedplus' clipboard
 set completeopt+=noselect
 let &directory=fnamemodify($MYVIMRC, ":p:h") . "/swap//" " Put swap files in the same directory vimrc is in
 set encoding=utf-8
