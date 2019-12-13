@@ -13,6 +13,7 @@ filetype plugin on
 set background=dark                                      " Use dark background
 set clipboard=unnamedplus                                " Use 'unnamedplus' clipboard
 set completeopt+=noselect
+set completeopt+=popup
 let &directory=fnamemodify($MYVIMRC, ":p:h") . "/swap//" " Put swap files in the same directory vimrc is in
 set encoding=utf-8
 set expandtab                                            " Use spaces instead of tabs
@@ -54,6 +55,10 @@ autocmd FileType haskell setlocal expandtab shiftwidth=2 tabstop=2 autoindent | 
 autocmd FileType netrw setlocal bufhidden=wipe
 autocmd FileType xml setlocal foldmethod=syntax
 autocmd FileType yaml setlocal expandtab shiftwidth=2 tabstop=2 autoindent
+
+augroup Workarounds
+    autocmd CompleteDone * call popup_close(popup_findinfo()) " Workaround for misbehaving ctrlp when a popup window is still open
+augroup END
 
 command Wb w | bd
 
