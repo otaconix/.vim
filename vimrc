@@ -57,15 +57,11 @@ autocmd FileType xml setlocal foldmethod=syntax
 autocmd FileType yaml setlocal expandtab shiftwidth=2 tabstop=2 autoindent
 
 augroup Workarounds
-    autocmd CompleteDone * call popup_close(popup_findinfo()) " Workaround for misbehaving ctrlp when a popup window is still open
+    au!
+    au CompleteDone * call popup_close(popup_findinfo()) " Workaround for misbehaving ctrlp when a popup window is still open
 augroup END
 
 command Wb w | bd
-
-augroup fmt
-    au!
-    au BufWritePre * Neoformat
-augroup END
 
 nmap <C-B> :CtrlPBuffer<CR>
 
@@ -94,9 +90,12 @@ if has('termguicolors')
     let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
 endif
 
+" Setup language servers
 let s:LanguageClient_serverCommands = {
             \ 'bash': ['bash-language-server', 'start'],
             \ 'dockerfile': ['docker-langserver', '--stdio'],
+            \ 'go': ['gopls', 'serve'],
+            \ 'java': ['jdtls'],
             \ 'javascript': ['javascript-typescript-langserver'],
             \ 'python': ['pyls'],
             \ 'rust': ['rustup', 'run', 'stable', 'rls'],
@@ -104,6 +103,7 @@ let s:LanguageClient_serverCommands = {
 
 let g:LanguageClient_serverCommands = {}
 
+" Only add language servers for which the binary is on the path
 for languageServer in keys(s:LanguageClient_serverCommands)
     let binary = s:LanguageClient_serverCommands[languageServer][0]
 
@@ -112,4 +112,6 @@ for languageServer in keys(s:LanguageClient_serverCommands)
     endif
 endfor
 
-nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+nnoremap <silent> <F5> :call LanguageClient_contextMenu()<CR>
+nnoremap <silent> <Leader>g :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <Leader>h :call LanguageClient#textDocument_hover()<CR>
