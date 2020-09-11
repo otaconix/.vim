@@ -14,7 +14,7 @@ set background=dark                                      " Use dark background
 set clipboard=unnamedplus                                " Use 'unnamedplus' clipboard
 set completeopt+=noselect
 set completeopt+=popup
-let &directory=fnamemodify($MYVIMRC, ":p:h") . "/swap//" " Put swap files in the same directory vimrc is in
+let &directory=expand("<sfile>:p:h") . "/swap//" " Put swap files in the same directory vimrc is in
 set encoding=utf-8
 set expandtab                                            " Use spaces instead of tabs
 if &modifiable
@@ -35,7 +35,7 @@ set viminfo=
 let g:ctrlp_by_filename = 1
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 if !has('python') && !has('python3')
-  echo 'In order to use pymatcher plugin, you need +python compiled vim'
+  echomsg 'In order to use pymatcher plugin, you need +python compiled vim'
 else
   let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 endif
@@ -74,7 +74,7 @@ elseif has("unix")
   set guifont=Cascadia\ Code\ 12
   set guioptions=
 elseif has("win32")
-  set guifont=Fira_Mono_Medium:h12
+  set guifont=Cascadia_Code:h10:cANSI:qDRAFT
   set guioptions=
 endif
 
