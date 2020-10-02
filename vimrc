@@ -100,6 +100,7 @@ let s:LanguageClient_serverCommands = {
         \ ['typescript-language-server', '--stdio'],
         \ ['javascript-typescript-langserver'], 
         \ ],
+      \ 'kotlin': ['kotlin-language-server'],
       \ 'python': ['pyls'],
       \ 'rust': ['rust-analyzer'],
       \ }
