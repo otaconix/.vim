@@ -96,23 +96,33 @@ let s:LanguageClient_serverCommands = {
       \ 'dockerfile': ['docker-langserver', '--stdio'],
       \ 'go': ['gopls', 'serve'],
       \ 'java': ['jdtls'],
-      \ 'javascript': ['javascript-typescript-langserver'],
+      \ 'javascript': [
+        \ ['typescript-language-server', '--stdio'],
+        \ ['javascript-typescript-langserver'], 
+        \ ],
       \ 'python': ['pyls'],
-      \ 'rust': ['rustup', 'run', 'stable', 'rls'],
+      \ 'rust': ['rust-analyzer'],
       \ }
 
 let g:LanguageClient_serverCommands = {}
 
 " Only add language servers for which the binary is on the path
 for languageServer in keys(s:LanguageClient_serverCommands)
-  let binary = s:LanguageClient_serverCommands[languageServer][0]
-
-  if executable(binary)
-    let g:LanguageClient_serverCommands[languageServer] = s:LanguageClient_serverCommands[languageServer]
+  let servers = s:LanguageClient_serverCommands[languageServer]
+  if type(servers[0]) != v:t_list
+    let servers = [servers]
   endif
+
+  for server in servers
+    if !has_key(g:LanguageClient_serverCommands, languageServer) && executable(server[0])
+      let g:LanguageClient_serverCommands[languageServer] = server
+      break
+    endif
+  endfor
 endfor
 
 nnoremap <silent> <F5> :call LanguageClient_contextMenu()<CR>
 nnoremap <silent> <Leader>f :call LanguageClient#textDocument_formatting()<CR>
 nnoremap <silent> <Leader>g :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> <Leader>h :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> <Leader>r :call LanguageClient#textDocument_rename()<CR>
