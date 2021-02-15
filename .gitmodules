@@ -25,7 +25,7 @@
 [submodule "pack/bundle/start/LanguageClient-neovim"]
 	path = pack/bundle/start/LanguageClient-neovim
 	url = https://github.com/autozimu/LanguageClient-neovim
-	branch = dev
+	branch = next
 [submodule "pack/bundle/start/neoformat"]
 	path = pack/bundle/start/neoformat
 	url = https://github.com/sbdchd/neoformat
