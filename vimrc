@@ -1,5 +1,7 @@
 unlet! skip_defaults_vim
-source $VIMRUNTIME/defaults.vim
+if filereadable(glob("$VIMRUNTIME/defaults.vim"))
+  source $VIMRUNTIME/defaults.vim
+endif
 if filereadable(glob("~/.localvimrc"))
   source ~/.localvimrc
 endif
@@ -13,7 +15,9 @@ filetype plugin on
 set background=dark                                      " Use dark background
 set clipboard=unnamedplus                                " Use 'unnamedplus' clipboard
 set completeopt+=noselect
-set completeopt+=popup
+if !has("nvim")
+  set completeopt+=popup
+endif
 let &directory=expand("<sfile>:p:h") . "/swap//" " Put swap files in the same directory vimrc is in
 set encoding=utf-8
 set expandtab                                            " Use spaces instead of tabs
