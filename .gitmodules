@@ -112,3 +112,6 @@
 [submodule "pack/bundle/start/vim-nomadproject"]
 	path = pack/bundle/start/vim-nomadproject
 	url = https://github.com/hashivim/vim-nomadproject.git
+[submodule "pack/bundle/start/vim-terraform"]
+	path = pack/bundle/start/vim-terraform
+	url = https://github.com/hashivim/vim-terraform
