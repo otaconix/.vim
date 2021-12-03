@@ -6,12 +6,6 @@ if filereadable(glob("~/.localvimrc"))
   source ~/.localvimrc
 endif
 
-syntax on
-
-filetype on
-filetype indent on
-filetype plugin on
-
 set background=dark                                      " Use dark background
 set clipboard=unnamedplus                                " Use 'unnamedplus' clipboard
 set completeopt+=noselect
@@ -86,13 +80,19 @@ endif
 if &term == "xterm-kitty"
   let &t_ut=''
 endif
-
+"
 " Use GUI colors on the terminal
-if has('termguicolors')
+if &term != "linux" && has('termguicolors')
   set termguicolors
   let &t_8f = "\<Esc>[38:2:%lu:%lu:%lum"
   let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
 endif
+
+syntax on
+
+filetype on
+filetype indent on
+filetype plugin on
 
 " Setup language servers
 let s:LanguageClient_serverCommands = {
